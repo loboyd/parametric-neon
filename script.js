@@ -11,9 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const phi = parseFloat(param5.value);
         const theta = parseFloat(param6.value);
 
-        const pathString = generatePathFromParams(A, d, f, w, phi, theta);
+        const pathString1 = generatePathFromParams(A, d, f, w, phi, theta);
+        const pathString2 = generatePathFromParams(A, d, f, w, phi - Math.PI, theta);
 
-        svg.innerHTML = `<path d="${pathString}" stroke="hsl(294, 46%, 59%)" fill="none" stroke-width="4"/>`;
+        svg.innerHTML = `
+            <path d="${pathString1}" stroke="hsl(60, 51%, 55%)" fill="none" stroke-width="4" stroke-linecap="round"/>
+            <path d="${pathString2}" stroke="hsl(294, 46%, 59%)" fill="none" stroke-width="4" stroke-linecap="round"/>
+        `;
     }
   
     param1.addEventListener('input', updateSVG);
