@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     updateSVG();
 });
 
-const N_SAMPLES = 500;
+const N_SAMPLES = 1024;
 
 function generatePathFromParams(A, d, f, w, phi, theta) {
     const samples = Array.from({ length: N_SAMPLES }, (_, r) => r)
-        .map(r => 0 + (2 * Math.PI - 0) * r / (500 - 1));
+        .map(r => 0 + (2 * Math.PI - 0) * r / (N_SAMPLES - 1));
 
     const z = (r) => A * Math.sin(f * r - phi) * d * Math.exp(-w * (r - Math.PI)**2) + d;
 
