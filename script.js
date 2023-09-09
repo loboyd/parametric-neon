@@ -29,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
 const N_SAMPLES = 500;
 
 function generatePathFromParams(A, d, f, w, phi, theta) {
-    console.log(theta);
-
     const samples = Array.from({ length: N_SAMPLES }, (_, r) => r)
         .map(r => 0 + (2 * Math.PI - 0) * r / (500 - 1));
 
@@ -44,8 +42,8 @@ function generatePathFromParams(A, d, f, w, phi, theta) {
 
     points = points
         .map(point => ({
-            x: (point.x*200/2.24 + 100),
-            y: (point.y*200/2.24 + 100),
+            x: (point.x*500/2.24 + 250),
+            y: (point.y*500/2.24 + 250),
         }));
 
     let path = points.map(point => `${point.x} ${point.y}`).join(' L ');
