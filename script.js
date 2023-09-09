@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const pathString = generatePathFromParams(A, d, f, w, phi, theta);
 
-        svg.innerHTML = `<path d="${pathString}" stroke="black" fill="none" stroke-width="1"/>`;
+        svg.innerHTML = `<path d="${pathString}" stroke="black" fill="none" stroke-width="4"/>`;
     }
   
     param1.addEventListener('input', updateSVG);
