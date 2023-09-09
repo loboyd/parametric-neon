@@ -6,12 +6,35 @@
   <script defer src="script.js"></script>
   <style>
     /* Add your CSS here */
+    #params {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
   </style>
 </head>
 <body>
-  <div>
-    <input type="range" id="param1" min="0" max="200" step="1">
-    <input type="range" id="param2" min="0" max="200" step="1">
+  <div id='params'>
+    <div>
+        <label>A</label>
+        <input type="range" id="param1" min="0" max="0.5" step="0.01" value="0.13">
+    </div>
+    <div>
+        <label>d</label>
+        <input type="range" id="param2" min="-10" max="10" step="0.1", value="1.0">
+    </div>
+    <div>
+        <label>f</label>
+        <input type="range" id="param3" min="-10" max="100" step="0.1" value="7">
+    </div>
+    <div>
+        <label>w</label>
+        <input type="range" id="param4" min="0" max="3" step="0.01" value="0.8">
+    </div>
+    <div>
+        <label>phi</label>
+        <input type="range" id="param5" min="-10" max="100" step="0.1" value="34.3">
+    </div>
   </div>
   <svg id="mysvg" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
     <!-- Paths will go here -->

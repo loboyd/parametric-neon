@@ -4,29 +4,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const svg = document.getElementById('mysvg');
   
     function updateSVG() {
-        const p1 = parseFloat(param1.value);
-        const p2 = parseFloat(param2.value);
-    
-        const pathString = generatePathFromParams(p1, p2);
-    
+        const A = parseFloat(param1.value);
+        const d = parseFloat(param2.value);
+        const f = parseFloat(param3.value);
+        const w = parseFloat(param4.value);
+        const phi = parseFloat(param5.value);
+
+        const pathString = generatePathFromParams(A, d, f, w, phi);
+
         svg.innerHTML = `<path d="${pathString}" stroke="black" fill="none" stroke-width="1"/>`;
     }
   
     param1.addEventListener('input', updateSVG);
     param2.addEventListener('input', updateSVG);
+    param3.addEventListener('input', updateSVG);
+    param4.addEventListener('input', updateSVG);
+    param5.addEventListener('input', updateSVG);
   
     updateSVG();
 });
 
 const N_SAMPLES = 500;
 
-function generatePathFromParams(p1, p2) {
-    let A = 0.13
-    let d = 1
-    let f = 7
-    let w = 0.8
-    let phi = 34.3
-
+function generatePathFromParams(A, d, f, w, phi) {
     const samples = Array.from({ length: N_SAMPLES }, (_, r) => r)
         .map(r => 0 + (2 * Math.PI - 0) * r / (500 - 1));
 
