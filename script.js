@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const pathString2 = generatePathFromParams(A, d, f, w, phi - Math.PI, theta);
 
         svg.innerHTML = `
-            <path id="curve1" d="${pathString1}" stroke="hsl(60, 51%, 55%)" fill="none" stroke-width="4" stroke-linecap="round"/>
+            <path id="curve1" d="${pathString1}" stroke="hsl(60, 51%, 55%)" fill="none" stroke-width="3" stroke-linecap="round"/>
             <path d="${pathString1}" stroke="white" fill="none" stroke-width="2" stroke-linecap="round"/>
-            <path id="curve2" d="${pathString2}" stroke="hsl(294, 46%, 59%)" fill="none" stroke-width="4" stroke-linecap="round"/>
+            <path id="curve2" d="${pathString2}" stroke="hsl(294, 46%, 59%)" fill="none" stroke-width="3" stroke-linecap="round"/>
             <path d="${pathString2}" stroke="white" fill="none" stroke-width="2" stroke-linecap="round"/>
         `;
     }
