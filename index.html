@@ -5,9 +5,17 @@
   <title>Parametric Curve SVG</title>
   <script defer src="script.js"></script>
   <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
     body {
         background: hsl(223, 23%, 10%);
         color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #curve1 {
@@ -22,6 +30,10 @@
         display: flex;
         flex-direction: column;
         max-width: 300px;
+        padding: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
   </style>
 </head>
