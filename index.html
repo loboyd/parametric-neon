@@ -54,6 +54,14 @@
       filter: drop-shadow(0 0 12px hsl(294, 46%, 59%));
     }
 
+    #equation {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      padding: 40px;
+      transform: translate(-50%);
+    }
+
     #params {
       display: flex;
       flex-direction: column;
@@ -91,6 +99,9 @@
       <label class='latex'>\theta</label>
       <input type="range" id="param6" min="0" max="6.2831852" step="0.01" value="0">
     </div>
+  </div>
+  <div id='equation' class='latex'>
+    (x, y) = d(A \sin(fr - \phi) e^{-w (r - \pi)^{2}} + 1) (\sin(r - \theta), \cos(r - \theta))
   </div>
   <svg id="mysvg" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
     <!-- paths will go here -->
