@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     param4.addEventListener('input', updateSVG);
     param5.addEventListener('input', updateSVG);
     param6.addEventListener('input', updateSVG);
-  
+
     updateSVG();
 });
 
@@ -46,8 +46,8 @@ function generatePathFromParams(A, d, f, w, phi, theta) {
 
     points = points
         .map(point => ({
-            x: (point.x*500/2.44 + 250),
-            y: (point.y*500/2.44 + 250),
+            x: (point.x*500/3.2 + 250),
+            y: (point.y*500/3.2 + 250),
         }));
 
     let path = points.map(point => `${point.x} ${point.y}`).join(' L ');
