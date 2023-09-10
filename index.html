@@ -5,14 +5,17 @@
   <title>Parametric Curve SVG</title>
   <script defer src="script.js"></script>
   <style>
-    /* Add your CSS here */
     body {
-        background: hsl(276, 29%, 11%);
+        background: hsl(223, 23%, 10%);
         color: white;
     }
 
-    path {
-        filter: drop-shadow(0 0 12px hsla(0, 3%, 97%, 0.5));
+    #curve1 {
+        filter: drop-shadow(0 0 12px hsl(60, 51%, 55%));
+    }
+
+    #curve2 {
+        filter: drop-shadow(0 0 12px hsl(294, 46%, 59%));
     }
 
     #params {
@@ -50,7 +53,7 @@
     </div>
   </div>
   <svg id="mysvg" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
-    <!-- Paths will go here -->
+    <!-- paths will go here -->
   </svg>
 </body>
 </html>

@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const param1 = document.getElementById('param1');
-    const param2 = document.getElementById('param2');
     const svg = document.getElementById('mysvg');
   
     function updateSVG() {
@@ -15,8 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const pathString2 = generatePathFromParams(A, d, f, w, phi - Math.PI, theta);
 
         svg.innerHTML = `
-            <path d="${pathString1}" stroke="hsl(60, 51%, 55%)" fill="none" stroke-width="4" stroke-linecap="round"/>
-            <path d="${pathString2}" stroke="hsl(294, 46%, 59%)" fill="none" stroke-width="4" stroke-linecap="round"/>
+            <path id="curve1" d="${pathString1}" stroke="hsl(60, 51%, 55%)" fill="none" stroke-width="4" stroke-linecap="round"/>
+            <path d="${pathString1}" stroke="white" fill="none" stroke-width="2" stroke-linecap="round"/>
+            <path id="curve2" d="${pathString2}" stroke="hsl(294, 46%, 59%)" fill="none" stroke-width="4" stroke-linecap="round"/>
+            <path d="${pathString2}" stroke="white" fill="none" stroke-width="2" stroke-linecap="round"/>
         `;
     }
   
