@@ -36,7 +36,9 @@ function generatePathFromParams(A, d, f, w, phi, theta) {
     const samples = Array.from({ length: N_SAMPLES }, (_, r) => r)
         .map(r => 0 + (2 * Math.PI - 0) * r / (N_SAMPLES - 1));
 
-    const z = (r) => A * Math.sin(f * r - phi) * d * Math.exp(-w * (r - Math.PI)**2) + d;
+    const z = r => A * Math.sin(f * r - phi) * d * Math.exp(-w * (r - Math.PI)**2) + d;
+
+    const t = x => x*500/3.2 + 250;
 
     let points = samples
         .map(r => ({
@@ -46,8 +48,8 @@ function generatePathFromParams(A, d, f, w, phi, theta) {
 
     points = points
         .map(point => ({
-            x: (point.x*500/3.2 + 250),
-            y: (point.y*500/3.2 + 250),
+            x: t(point.x),
+            y: t(point.y),
         }));
 
     let path = points.map(point => `${point.x} ${point.y}`).join(' L ');
