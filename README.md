@@ -1,2 +1,2 @@
-the goal is to covnert parametric curves into SVGs by approximating with Bezier paths
+a beautiful mathy little toy of the internet
 
