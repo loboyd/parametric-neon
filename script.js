@@ -46,8 +46,8 @@ function generatePathFromParams(A, d, f, w, phi, theta) {
 
     points = points
         .map(point => ({
-            x: (point.x*500/2.24 + 250),
-            y: (point.y*500/2.24 + 250),
+            x: (point.x*500/2.44 + 250),
+            y: (point.y*500/2.44 + 250),
         }));
 
     let path = points.map(point => `${point.x} ${point.y}`).join(' L ');
